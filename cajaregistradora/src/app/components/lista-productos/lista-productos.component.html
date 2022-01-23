@@ -1,0 +1,44 @@
+
+<header class="bg-white">
+    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold text-gray-900">
+        Seleccione un servicio
+      </h1>
+      <h3 _ngcontent-buj-c11="" class="mt-4 text-sm text-gray-700"> Pulse en el boton para añadir un servicio a la comanda </h3>
+    </div>
+  </header>
+
+  <div class="bg-white">
+    <div class="max-w-2xl mx-auto py-8 px-4 sm:py-8 sm:px-6 lg:max-w-7xl lg:px-8">
+   
+  
+      <div class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-6" >
+        <a href="#" class="group" *ngFor="let producto of productos" (click)="onClick(producto)">
+            <div class="w-full min-h-40 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-40 lg:aspect-none">
+                <img [src]="producto.imgUrl"alt="Front of men&#039;s Basic Tee in black." class="w-full h-full object-center object-cover lg:w-full lg:h-full">
+            </div>
+
+            <div class="flex justify-between align-center items-center">
+          <h3 class="mt-4 text-sm text-gray-700">
+            {{producto.nombre}}
+          </h3>
+          <p class="mt-1 text-lg font-medium text-gray-900">
+            {{producto.precio}} €
+          </p>
+          <div class="px-2 py-2 sm:px-2">
+            <button type="submit" class="inline-flex justify-center py-1 px-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[#90171b] hover:bg-[#000] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#000]">
+              +
+            </button>
+          </div>
+        </div>          
+        </a>
+    
+  
+  
+        <!-- More products... -->
+      </div>
+     
+    </div>
+
+    
+  </div>

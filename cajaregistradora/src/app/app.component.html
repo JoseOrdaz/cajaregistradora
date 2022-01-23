@@ -1,0 +1,38 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="bg-gray-50">
+
+
+  <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-4 lg:px-8 lg:flex lg:items-center lg:justify-between">
+    <div class="logo">
+      <img src="https://jesuspeluquero.es/wp-content/uploads/2013/12/gen_logo-1024x671.png" alt="">
+    </div>
+    <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+      <span class="block">Caja Registradora</span>
+      <span class="block text-[#90171b]">Jesus Peluquero</span>
+    </h2>
+    <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+      <div class="inline-flex rounded-md shadow">
+        <a href="https://jesuspeluquero.es/wp-admin/admin.php?page=bookly-calendar" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white hover:text-[#fff] bg-[#90171b] hover:bg-[#000]">
+          Calendario
+        </a>
+      </div>
+      <div class="ml-3 inline-flex rounded-md shadow">
+        <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-[#90171b] hover:text-[#fff] bg-white hover:bg-[#000]">
+          Listado de ventas
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="izquierda">
+
+  <app-comanda [arrProductos]="productosSeleccionados"></app-comanda>
+</div>
+<div class="derecha">
+<app-lista-productos titulo="Servicio" [productos]="arrCorte" (productoSeleccionado)="onProductoSeleccionado($event)"></app-lista-productos>
+</div>
+
+</div>

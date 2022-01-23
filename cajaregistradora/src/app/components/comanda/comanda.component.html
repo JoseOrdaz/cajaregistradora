@@ -1,0 +1,194 @@
+
+
+
+<div class="bg-white">
+
+    <header class="bg-white">
+        <div class="flex justify-between max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+
+          <div class="titulocomanda">
+          <h1 class="text-3xl font-bold text-gray-900">
+            Comanda
+          </h1>
+ <h3 _ngcontent-buj-c11="" class="mt-4 text-sm text-gray-700">Listado de la comanda  </h3>
+        </div>
+          <div class="text-base font-medium text-gray-900 text-right p-2 sm:rounded-lg bg-slate-50">
+            <p>Total comanda</p>
+            <p>{{calculaTotal()}} €</p>
+
+            
+            <p class="mt-0.5 text-sm text-right text-gray-500">Con IVA incluido.</p>
+   
+            </div>
+  
+         
+   
+        </div>
+    
+
+    </header>
+    
+
+
+ <!-- This example requires Tailwind CSS v2.0+ -->
+<div class="flex flex-col lg:max-w-7xl mx-auto" >
+    <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8" >
+
+        <span class="sm:ml-3 flex justify-end p-5">
+         <!--
+          <button *ngFor="let producto of arrProductos; let indice = index;" (click)="onClickBorrar(indice)" type="button" class="mx-5 inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#90171b] hover:bg-[#000] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#000]">
+          
+            <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            Limpiar listado
+          </button>
+        --> 
+          <button printTitle="Print Title" printSectionId="print-section" ngxPrint type="button" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#90171b] hover:bg-[#000]focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#000]">
+            <!-- Heroicon name: solid/check -->
+            <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            Imprimir ticket
+          </button>
+          
+        </span>   
+
+        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg" *ngFor="let producto of arrProductos; let indice = index;" (click)="onClickBorrar(indice)" >
+
+          <table class="min-w-full divide-y divide-gray-200"  >
+            <thead class="bg-gray-50">
+              <tr>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Servicio
+                </th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Precio
+                </th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Cantidad
+                </th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Eliminar
+                  </th>
+            
+              
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200" >
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <div class="flex-shrink-0 h-10 w-10">
+                      <img class="h-10 w-10 rounded-full" [src]="producto.imgUrl" alt="">
+                    </div>
+                    <div class="ml-4">
+                      <div class="text-sm font-medium text-gray-900">
+                        {{producto.nombre}}
+                      </div>
+                     
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="text-sm text-[#90171b] font-medium text-gray-900">{{producto.precio}} €</div>
+                  
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                    X {{producto.cantidad}}
+                  </span>
+                </td>
+           
+                <td class="px-6 py-4 whitespace-nowrap text-left text-sm font-medium">
+                  <a href="#" class="text-indigo-600 hover:text-indigo-900">Quitar</a>
+                </td>
+              </tr>
+  
+            </tbody>
+            
+          </table>
+         
+          </div>
+      </div>
+      
+    </div>
+    
+  </div>
+
+
+  <div class="imprimir hidden" id="print-section">
+    <div class="titulocomanda">
+      <h1 class="text-3xl font-bold text-gray-900">
+          Jesus Peluquero
+      </h1>
+      <p> Carrer d’Isabel la Catòlica, 38</p>
+      <p> 46100 Burjassot, Valencia</p>
+        
+      <p> 963 64 37 92</p>
+        
+      <p>jesuspeluquerosbj@gmail.com</p>
+    </div>
+    
+        <table class="min-w-full divide-y divide-gray-200"  *ngFor="let producto of arrProductos; let indice = index;" (click)="onClickBorrar(indice)">
+          <thead class="bg-gray-50">
+            <tr>
+              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Servicio
+              </th>
+              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Precio
+              </th>
+              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Cantidad
+              </th>
+          
+          
+            
+            </tr>
+          </thead>
+          <tbody >
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">
+  
+                    <img style="width: 2.5rem;border-radius: 9999px;height: 2.5rem;" class="h-10 w-10 rounded-full" [src]="producto.imgUrl" alt="">
+                  
+              </td>
+
+              <td>
+                {{producto.nombre}}
+
+              </td>
+              <td>
+                {{producto.precio}} €
+
+              </td>
+
+              <td>
+                X {{producto.cantidad}}
+
+              </td>
+           
+         
+            
+            </tr>
+
+          </tbody>
+          
+        </table>
+
+        
+          <div class="text-base font-medium text-gray-900 text-right p-2 sm:rounded-lg bg-slate-50">
+            <p>Total a pagar</p>
+            <p>{{calculaTotal()}} €</p>
+    
+            
+            <p class="mt-0.5 text-sm text-right text-gray-500">Con IVA incluido.</p>
+    
+
+  </div>
+
+
+
+ 
